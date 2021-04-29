@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  labels:
+  - "category: engineering"
+  - dependencies
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: axe-core
+    versions:
+    - ">= 0"
+  - dependency-name: electron
+    versions:
+    - ">= 0"
+  - dependency-name: office-ui-fabric-react
+    versions:
+    - ">= 0"
+  - dependency-name: webdriverio
+    versions:
+    - ">=5.0.0"
+  commit-message:
+    prefix: chore
+    include: scope
